@@ -9,12 +9,11 @@
    - Coral Accent: #ff4f4f
    ============================================================ */
 
-/* Custom Font Placeholder - Upload your font file to miniapp/assets/fonts/ */
+/* Custom Font: Aka10-Light */
 @font-face {
   font-family: 'MangoWingsFont';
-  src: url('assets/fonts/custom-font.woff2') format('woff2'),
-       url('assets/fonts/custom-font.woff') format('woff'),
-       url('assets/fonts/custom-font.ttf') format('truetype');
+  src: url('assets/fonts/Aka10-Light.ttf') format('truetype'),
+       url('assets/fonts/custom-font.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
