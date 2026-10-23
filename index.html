@@ -10,287 +10,302 @@
 </head>
 <body>
 
-  <!-- ================= TOP HEADER ================= -->
-  <header class="header-bar">
-    <div class="brand-container">
+  <!-- ================= TOP BRAND HEADER ================= -->
+  <header class="app-header">
+    <div class="logo-wrapper">
       <img src="assets/logo-dark.png" alt="MangoWings Logo" class="brand-logo">
     </div>
-    <nav class="nav-links">
-      <a class="nav-item active" data-tab="home">ပင်မ</a>
-      <a class="nav-item" data-tab="guide">လမ်းညွှန်</a>
-      <a class="nav-item" data-tab="map">မြေပုံ</a>
-      <a class="nav-item" data-tab="cards">Arrival Card</a>
-    </nav>
+    <div class="welcome-box">
+      <h2>မင်္ဂလာပါ</h2>
+      <p>လိုအပ်သော ဝန်ဆောင်မှုကို ရွေးချယ်ပေးပါခင်ဗျာ</p>
+    </div>
   </header>
 
-  <!-- ================= MAIN CONTENT ================= -->
-  <main class="main-content">
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="app-container">
 
-    <!-- HERO SECTION -->
-    <section class="hero-card">
-      <div class="badge-tag">
-        <span class="badge-dot"></span>
-        <span>MangoWings Travel Guide</span>
+    <!-- ================= VIEW 1: MAIN MENU (EXACT BOT BUTTONS) ================= -->
+    <div class="menu-view active" id="view-main-menu">
+      
+      <!-- Row 1: Full-width Block Button (FAQ) -->
+      <div class="button-row single">
+        <button class="menu-btn btn-faq" id="btn-open-faq">
+          <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div class="btn-text">
+            <span class="btn-title">အမေးများတဲ့မေးခွန်းများ</span>
+            <span class="btn-sub">FAQ & ခရီးသွားလမ်းညွှန်များ</span>
+          </div>
+          <div class="btn-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </button>
       </div>
-      <h1 class="hero-title">ပထမဆုံးပြည်ပ ခရီးအတွက် လေဆိပ်မသွားခင် ဒါတွေဖတ်ပါ။</h1>
-      <p class="hero-subtitle">
-        အလည် သို့မဟုတ် ကျောင်းနဲ့ ထိုင်း၊ မလေးရှား၊ စင်ကာပူ သွားမည့်သူများအတွက် ပြင်ဆင်စရာများနှင့် ရန်ကုန်လေဆိပ် ထွက်ခွာလမ်းကြောင်းကို တစ်နေရာတည်းတွင် ဖတ်ရှုနိုင်ပါသည်။
-      </p>
-      <button class="hero-btn" id="hero-read-btn">
-        <span>လမ်းညွှန် ဖတ်မယ်</span>
-        <!-- Vector Arrow SVG -->
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="7" y1="17" x2="17" y2="7"></line>
-          <polyline points="7 7 17 7 17 17"></polyline>
-        </svg>
-      </button>
-    </section>
 
-    <!-- PILL NAVIGATION TABS -->
-    <div class="tab-pills">
-      <button class="tab-pill active" data-tab="guide">
-        <!-- Book/Guide Vector SVG -->
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-        </svg>
-        <span>01 လမ်းညွှန်</span>
-      </button>
+      <!-- Row 2: Two Buttons (Yangon Airport Map & Arrival Card) -->
+      <div class="button-row double">
+        <button class="menu-btn btn-map" id="btn-open-map">
+          <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          </div>
+          <span class="btn-title">ရန်ကုန်လေဆိပ် မြေပုံကြည့်မယ်</span>
+        </button>
 
-      <button class="tab-pill" data-tab="map">
-        <!-- Map Vector SVG -->
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-          <line x1="8" y1="2" x2="8" y2="18"></line>
-          <line x1="16" y1="6" x2="16" y2="22"></line>
-        </svg>
-        <span>02 မြေပုံ</span>
-      </button>
+        <button class="menu-btn btn-tdac" id="btn-open-arrival">
+          <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+              <line x1="7" y1="8" x2="17" y2="8"></line>
+              <line x1="7" y1="12" x2="13" y2="12"></line>
+            </svg>
+          </div>
+          <span class="btn-title">Arrival Card ဖြည့်မယ်</span>
+        </button>
+      </div>
 
-      <button class="tab-pill" data-tab="cards">
-        <!-- Card/Passport Vector SVG -->
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="16" rx="3"></rect>
-          <line x1="7" y1="8" x2="17" y2="8"></line>
-          <line x1="7" y1="12" x2="13" y2="12"></line>
-        </svg>
-        <span>03 Arrival Card</span>
-      </button>
+      <!-- Row 3: Two Buttons (Services & Admin Contact) -->
+      <div class="button-row double">
+        <button class="menu-btn btn-services" id="btn-open-services">
+          <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <span class="btn-title">ဝန်ဆောင်မှုများ</span>
+        </button>
+
+        <button class="menu-btn btn-admin" id="btn-open-admin">
+          <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <span class="btn-title">Admin နဲ့စာပို့မယ်</span>
+        </button>
+      </div>
+
     </div>
 
-    <!-- ================= TAB 1: GUIDE ================= -->
-    <div class="tab-panel active" id="tab-guide">
-      <!-- Filters -->
-      <div class="filter-row">
-        <div class="filter-group">
-          <label class="filter-label">ဘာနဲ့ သွားမလဲ?</label>
-          <select class="filter-select" id="purpose-select">
-            <option value="visit">အလည်</option>
-            <option value="student">ကျောင်း</option>
-            <option value="other">အခြား</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label class="filter-label">ဘယ်နိုင်ငံလဲ?</label>
-          <select class="filter-select" id="country-select">
-            <option value="thailand">ထိုင်း (Thailand)</option>
-            <option value="malaysia">မလေးရှား (Malaysia)</option>
-            <option value="singapore">စင်ကာပူ (Singapore)</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Info Card -->
-      <div class="info-card">
-        <h3 class="card-title" id="guide-card-title">ထိုင်းကို အလည်သွားဖို့</h3>
-        
-        <div class="visa-comparison-grid">
-          <div>
-            <div class="visa-item-title">ဗီဇာမလိုဘဲ</div>
-            <div class="visa-item-desc">နိုင်ငံတကာလေဆိပ်မှ ဝင်ရောက်လျှင် ၁၄ ရက်အထိ နေထိုင်ခွင့် ရရှိပါမည်။</div>
-          </div>
-          <div>
-            <div class="visa-item-title">TR Visa</div>
-            <div class="visa-item-desc">ရက် ၆၀ အထိ နေလိုပါက သံရုံးတွင် ကြိုတင်လျှောက်ထားရန် လိုအပ်ပါသည်။</div>
-          </div>
-        </div>
-
-        <ul class="checklist">
-          <li class="checklist-item">
-            <!-- Vector Check SVG -->
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span><strong>Passport သက်တမ်း:</strong> အနည်းဆုံး ၆ လ ကျန်ရှိရမည်ဖြစ်ပြီး အသွား/အပြန် လေယာဉ်လက်မှတ်နှင့် Hotel Booking အသင့်ပြင်ထားပါ။</span>
-          </li>
-          <li class="checklist-item">
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span><strong>TDAC (Digital Entry Form):</strong> ထိုင်းနိုင်ငံသို့ မထွက်ခွာမီ ၃ ရက်အတွင်း တရားဝင် ဝက်ဘ်ဆိုက်တွင် အခမဲ့ ဖြည့်သွင်းထားရပါမည်။</span>
-          </li>
-          <li class="checklist-item">
-            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <span><strong>Show Money ပြင်ဆင်ရန်:</strong> တစ်ဦးလျှင် အနည်းဆုံး ฿20,000 (ဘတ်နှစ်သောင်း) သို့မဟုတ် ညီမျှသော USD/SGD အကြံပြုဆောင်ထားပေးပါ။</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ================= TAB 2: YANGON AIRPORT MAP ================= -->
-    <div class="tab-panel" id="tab-map">
-      <div class="info-card">
-        <h3 class="card-title">
-          <!-- Plane Departure Vector SVG -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+    <!-- ================= VIEW 2: ARRIVAL CARD SELECTION ================= -->
+    <div class="sub-view" id="view-arrival-cards">
+      <div class="view-header">
+        <button class="back-btn" data-back="view-main-menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
-          <span>ရန်ကုန်အပြည်ပြည်ဆိုင်ရာလေဆိပ် (Terminal 1) ထွက်ခွာအဆင့်ဆင့်</span>
-        </h3>
-        
-        <div class="airport-flowchart">
-          <!-- Step 1 -->
-          <div class="step-card">
-            <div class="step-number">၁</div>
-            <div class="step-content">
-              <div class="step-title">လေဆိပ်အဝင် (Terminal 1 Gate)</div>
-              <div class="step-desc">လုံခြုံရေးတံခါးဝတွင် ခရီးဆောင်အိတ်များ X-Ray စစ်ဆေးခြင်း</div>
-            </div>
-          </div>
-          <div class="flow-connector"><div class="connector-line"></div></div>
-
-          <!-- Step 2 -->
-          <div class="step-card">
-            <div class="step-number">၂</div>
-            <div class="step-content">
-              <div class="step-title">Airline Check-in Counter (Row A - E)</div>
-              <div class="step-desc">Boarding Pass ထုတ်ယူခြင်းနှင့် ခရီးဆောင်အိတ် (Luggage) အပ်နှံခြင်း</div>
-            </div>
-          </div>
-          <div class="flow-connector"><div class="connector-line"></div></div>
-
-          <!-- Step 3 -->
-          <div class="step-card">
-            <div class="step-number">၃</div>
-            <div class="step-content">
-              <div class="step-title">Customs & Security Screening</div>
-              <div class="step-desc">လက်ဆွဲအိတ်နှင့် ခန္ဓာကိုယ် Scan စစ်ဆေးဖြတ်သန်းခြင်း</div>
-            </div>
-          </div>
-          <div class="flow-connector"><div class="connector-line"></div></div>
-
-          <!-- Step 4 -->
-          <div class="step-card">
-            <div class="step-number">၄</div>
-            <div class="step-content">
-              <div class="step-title">Immigration Departure (လဝက စစ်ဆေးရေး)</div>
-              <div class="step-desc">Passport၊ Boarding Pass၊ Return Ticket နှင့် TDAC စစ်ဆေးတံဆိပ်တုံးထုခြင်း</div>
-            </div>
-          </div>
-          <div class="flow-connector"><div class="connector-line"></div></div>
-
-          <!-- Step 5 -->
-          <div class="step-card">
-            <div class="step-number">၅</div>
-            <div class="step-content">
-              <div class="step-title">Departure Lounge & Duty Free</div>
-              <div class="step-desc">လေယာဉ်စောင့်ဆိုင်းခန်း၊ မုန့်စားခန်းနှင့် အနားယူနေရာများ</div>
-            </div>
-          </div>
-          <div class="flow-connector"><div class="connector-line"></div></div>
-
-          <!-- Step 6 -->
-          <div class="step-card">
-            <div class="step-number">၆</div>
-            <div class="step-content">
-              <div class="step-title">Boarding Gate (Gate 1 - 10)</div>
-              <div class="step-desc">ခရီးစဉ်အလိုက် သတ်မှတ်ထားသော Gate မှတစ်ဆင့် လေယာဉ်ပေါ်သို့ တက်ရောက်ခြင်း</div>
-            </div>
-          </div>
-        </div>
+          <span>နောက်သို့</span>
+        </button>
+        <h3>Digital Arrival Card</h3>
       </div>
-    </div>
 
-    <!-- ================= TAB 3: DIGITAL ARRIVAL CARDS ================= -->
-    <div class="tab-panel" id="tab-cards">
-      <div class="arrival-cards-grid">
-        
-        <!-- THAILAND TDAC -->
-        <div class="entry-card-item active" data-card="thailand">
-          <div class="entry-card-left">
-            <div class="country-flag-icon">
-              <!-- Shield / Passport SVG -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1058c5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <p class="section-desc">မိမိသွားရောက်မည့် နိုင်ငံအတွက် Digital Entry Card ကို ရွေးချယ်ပါ-</p>
+
+      <div class="card-list">
+        <!-- Thailand TDAC -->
+        <div class="card-choice-item active" id="card-thailand">
+          <div class="card-left">
+            <div class="flag-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1058c5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <div class="entry-card-info">
+            <div>
               <h4>Thailand (TDAC)</h4>
-              <p>ထိုင်းနိုင်ငံသုံး Thailand Digital Arrival Card</p>
+              <p>ထိုင်းနိုင်ငံသုံး အလိုအလျောက်ဖြည့် စနစ်</p>
             </div>
           </div>
-          <span class="badge-status ready">အဆင်သင့်ရှိ</span>
+          <span class="status-pill active-pill">အဆင်သင့်</span>
         </div>
 
-        <!-- MALAYSIA MDAC -->
-        <div class="entry-card-item disabled" data-card="malaysia">
-          <div class="entry-card-left">
-            <div class="country-flag-icon">
-              <!-- Lock / Hourglass SVG -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Malaysia MDAC -->
+        <div class="card-choice-item disabled" id="card-malaysia">
+          <div class="card-left">
+            <div class="flag-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </div>
-            <div class="entry-card-info">
+            <div>
               <h4>Malaysia (MDAC)</h4>
-              <p>Malaysia Digital Arrival Card</p>
+              <p>မလေးရှားနိုင်ငံသုံး Digital Card</p>
             </div>
           </div>
-          <span class="badge-status coming-soon">Coming Soon</span>
+          <span class="status-pill coming-pill">Coming Soon</span>
         </div>
 
-        <!-- SINGAPORE SGAC -->
-        <div class="entry-card-item disabled" data-card="singapore">
-          <div class="entry-card-left">
-            <div class="country-flag-icon">
-              <!-- Lock / Hourglass SVG -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Singapore SGAC -->
+        <div class="card-choice-item disabled" id="card-singapore">
+          <div class="card-left">
+            <div class="flag-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </div>
-            <div class="entry-card-info">
+            <div>
               <h4>Singapore (SGAC)</h4>
-              <p>Singapore Arrival Card with e-Health</p>
+              <p>စင်ကာပူနိုင်ငံသုံး SG Arrival Card</p>
             </div>
           </div>
-          <span class="badge-status coming-soon">Coming Soon</span>
+          <span class="status-pill coming-pill">Coming Soon</span>
         </div>
+      </div>
+    </div>
 
+    <!-- ================= VIEW 3: YANGON AIRPORT MAP ================= -->
+    <div class="sub-view" id="view-airport-map">
+      <div class="view-header">
+        <button class="back-btn" data-back="view-main-menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>နောက်သို့</span>
+        </button>
+        <h3>ရန်ကုန်လေဆိပ် မြေပုံ (Terminal 1)</h3>
+      </div>
+
+      <div class="airport-steps-wrapper">
+        <div class="step-box">
+          <div class="step-num">၁</div>
+          <div class="step-info">
+            <h4>လေဆိပ်အဝင် (Terminal 1 Gate)</h4>
+            <p>လုံခြုံရေးတံခါးဝတွင် ခရီးဆောင်အိတ်များ X-Ray စစ်ဆေးခြင်း</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step-box">
+          <div class="step-num">၂</div>
+          <div class="step-info">
+            <h4>Airline Check-in Counter (Row A - E)</h4>
+            <p>Boarding Pass ထုတ်ယူခြင်းနှင့် ခရီးဆောင်အိတ် အပ်နှံခြင်း</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step-box">
+          <div class="step-num">၃</div>
+          <div class="step-info">
+            <h4>Customs & Security Screening</h4>
+            <p>လက်ဆွဲအိတ်နှင့် ကိုယ်ခန္ဓာ Scan စစ်ဆေးခြင်း</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step-box">
+          <div class="step-num">၄</div>
+          <div class="step-info">
+            <h4>Immigration Departure (လဝက)</h4>
+            <p>Passport နှင့် Boarding Pass စစ်ဆေးပြီး တံဆိပ်တုံးထုခြင်း</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step-box">
+          <div class="step-num">၅</div>
+          <div class="step-info">
+            <h4>Departure Lounge & Duty Free</h4>
+            <p>စောင့်ဆိုင်းခန်း၊ မုန့်ဆိုင်များနှင့် အနားယူခန်းများ</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step-box">
+          <div class="step-num">၆</div>
+          <div class="step-info">
+            <h4>Boarding Gate (Gate 1 - 10)</h4>
+            <p>လေယာဉ်ပေါ်သို့ စတင်တက်ရောက်ခြင်း</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= VIEW 4: FAQ ================= -->
+    <div class="sub-view" id="view-faq">
+      <div class="view-header">
+        <button class="back-btn" data-back="view-main-menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>နောက်သို့</span>
+        </button>
+        <h3>အမေးများတဲ့မေးခွန်းများ</h3>
+      </div>
+
+      <div class="accordion-list">
+        <div class="faq-item">
+          <div class="faq-q">ထိုင်းနိုင်ငံသို့ ဗီဇာမလိုဘဲ ဘယ်နှစ်ရက် နေနိုင်သလဲ?</div>
+          <div class="faq-a">မြန်မာနိုင်ငံကူးလက်မှတ် (Passport) ကိုင်ဆောင်သူများအနေဖြင့် လေကြောင်းလိုင်းဖြင့် ဝင်ရောက်ပါက ၁၄ ရက် ဗီဇာမလိုဘဲ နေထိုင်နိုင်ပါသည်။</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Show Money ဘယ်လောက် ပြင်ဆင်သွားရမလဲ?</div>
+          <div class="faq-a">ထိုင်းနိုင်ငံအတွက် တစ်ဦးလျှင် အနည်းဆုံး ဘတ် ၂၀,၀၀၀ (သို့မဟုတ်) ညီမျှသော USD/SGD အကြံပြုပြင်ဆင်ထားရန် လိုအပ်ပါသည်။</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">TDAC ကို ဘယ်အချိန်မှာ ဖြည့်ရမလဲ?</div>
+          <div class="faq-a">ထိုင်းနိုင်ငံသို့ မထွက်ခွာမီ ၃ ရက်အတွင်း ကြိုတင်၍ အခမဲ့ ဖြည့်သွင်းထားရပါမည်။</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= VIEW 5: SERVICES ================= -->
+    <div class="sub-view" id="view-services">
+      <div class="view-header">
+        <button class="back-btn" data-back="view-main-menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>နောက်သို့</span>
+        </button>
+        <h3>MangoWings ဝန်ဆောင်မှုများ</h3>
+      </div>
+
+      <div class="services-list">
+        <div class="service-card">
+          <h4>အသွားအပြန် လေယာဉ်လက်မှတ်</h4>
+          <p>ဈေးနှုန်းအသက်သာဆုံး ခရီးစဉ်များကို ရွေးချယ်စီစဉ်ပေးခြင်း</p>
+        </div>
+        <div class="service-card">
+          <h4>ဟိုတယ်ဘိုကင်</h4>
+          <p>လဝက စစ်ဆေးမှု အဆင်ပြေစေမည့် တရားဝင် ဟိုတယ်ဘိုကင်များ</p>
+        </div>
+        <div class="service-card">
+          <h4>Digital Arrival Form (TDAC)</h4>
+          <p>ခရီးမထွက်ခင် ကြိုတင် အလိုအလျောက် ဖြည့်သွင်းပေးခြင်း</p>
+        </div>
+        <div class="service-fee-card">
+          <h4>ဝန်ဆောင်ခ</h4>
+          <div class="price">တစ်ဦးလျှင် 52,000 Ks</div>
+          <p>စာရွက်စာတမ်းစစ်ဆေးခြင်း၊ ဟိုတယ်၊ လက်မှတ်နှင့် TDAC အားလုံးအပြီးအစီး ပါဝင်ပါသည်။</p>
+        </div>
       </div>
     </div>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <p>&copy; 2026 MangoWings Travel & Tour. All rights reserved.</p>
-  </footer>
-
-  <!-- ================= COMING SOON MODAL ================= -->
-  <div class="modal-overlay" id="coming-soon-modal">
+  <!-- ================= POPUP MODAL ================= -->
+  <div class="modal-overlay" id="popup-modal">
     <div class="modal-box">
-      <!-- Clock SVG -->
-      <svg class="modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <polyline points="12 6 12 12 16 14"></polyline>
-      </svg>
-      <h3 class="modal-title" id="modal-title">မကြာမီ လာပါမည်</h3>
-      <p class="modal-text" id="modal-text">ဤဝန်ဆောင်မှုကို မကြာမီ ထည့်သွင်းပေးပါမည်ခင်ဗျာ။</p>
-      <button class="modal-btn" id="modal-close-btn">နားလည်ပါပြီ</button>
+      <div class="modal-icon-box">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+      </div>
+      <h3 id="modal-title">မကြာမီ လာပါမည်</h3>
+      <p id="modal-desc">ဤဝန်ဆောင်မှုကို မကြာမီ ထည့်သွင်းပေးပါမည်ခင်ဗျာ။</p>
+      <button class="modal-ok-btn" id="modal-btn-close">နားလည်ပါပြီ</button>
     </div>
   </div>
 
